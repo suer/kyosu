@@ -12,11 +12,7 @@ Install dependencies:
 
 Database preference:
 
-    $ export MONGODB_HOST=localhost
-    $ export MONGODB_PORT=27017
-    $ export MONGODB_DATABASE=kyosu_production
-    $ export MONGODB_USERNAME=admin
-    $ export MONGODB_PASSWORD=xxxxx
+    $ export MONGODB_URI=mongodb://<user id>:<password>@<host>:<port>/<db name>
 
 Omniauth preference:
 
