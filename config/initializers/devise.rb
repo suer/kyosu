@@ -1,5 +1,5 @@
 Devise.setup do |config|
-  require 'devise/orm/active_record'
+  require 'devise/orm/mongoid'
   config.secret_key = Settings.devise_secret_key
   config.sign_out_via = :delete
   case Settings.omniauth.args

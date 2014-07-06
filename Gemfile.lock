@@ -29,6 +29,8 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    bson (2.3.0)
+    bson_ext (1.5.1)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -37,6 +39,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    connection_pool (2.0.0)
     daemons (1.1.9)
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -87,6 +90,15 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (5.3.5)
+    mongoid (4.0.0)
+      activemodel (~> 4.0)
+      moped (~> 2.0.0)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
+    moped (2.0.0)
+      bson (~> 2.2)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -114,8 +126,9 @@ GEM
     omniauth-twitter (1.0.1)
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
+    optionable (0.2.0)
+    origin (2.1.1)
     orm_adapter (0.5.0)
-    pg (0.17.1)
     polyglot (0.3.5)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
@@ -182,7 +195,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.9)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -222,16 +234,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson_ext
   coffee-rails (~> 4.0.0)
   devise
   erb2haml
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mongoid
   omniauth
   omniauth-github
   omniauth-twitter
-  pg
   quiet_assets
   rails (= 4.1.0)
   rspec-rails
@@ -239,7 +252,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   settingslogic
   spring
-  sqlite3
   turbolinks
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)

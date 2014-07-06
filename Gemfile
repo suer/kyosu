@@ -45,13 +45,11 @@ gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'settingslogic'
 
+gem 'mongoid'
+gem 'bson_ext'
+
 group :development, :test do
-  gem 'sqlite3'
   gem 'erb2haml'
   gem 'rspec-rails'
   gem 'quiet_assets'
-end
-
-group :production do
-  gem 'pg'
 end

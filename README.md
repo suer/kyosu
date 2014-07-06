@@ -10,18 +10,21 @@ Install dependencies:
 
     $ bundle install --path .bundle --without development test
 
-Precompile assets:
+Database preference:
 
-    $ bundle exec rake assets:precompile RAILS_ENV=production
+    $ export MONGODB_HOST=localhost
+    $ export MONGODB_PORT=27017
+    $ export MONGODB_DATABASE=kyosu_production
+    $ export MONGODB_USERNAME=admin
+    $ export MONGODB_PASSWORD=xxxxx
 
-Setup database:
-
-    $ bundle exec rake db:migrate RAILS_ENV=production
-
-Run:
+Omniauth preference:
 
     $ export OMNIAUTH_PROVIDER=github
     $ export OMNIAUTH_ARGS="['Client ID','Client Secret']"
+
+Run:
+
     $ bundle exec rails s -e production
 
 and access to http://localhost:3000/
@@ -29,14 +32,22 @@ and access to http://localhost:3000/
 For developers
 ---------------
 
-setup databse:
+launch mongodb:
+
+    $ mkdir kyosu_development
+    $ mongod --dbpath kyosu_development
+
+launch application:
 
     $ bundle exec rake db:migrate RAILS_ENV=test
 
 Testing
 ---------------
 
-Setup database:
+launch mongodb:
+
+    $ mkdir kyosu_test
+    $ mongod --dbpath kyosu_test
 
     $ bundle exec rake db:migrate RAILS_ENV=test
 
