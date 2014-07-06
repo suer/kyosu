@@ -38,6 +38,7 @@ gem 'spring',        group: :development
 
 gem 'websocket-rails'
 gem 'haml-rails'
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem 'sqlite3'
