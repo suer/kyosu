@@ -37,6 +37,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'websocket-rails'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'sqlite3'
