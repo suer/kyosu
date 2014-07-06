@@ -39,6 +39,11 @@ gem 'spring',        group: :development
 gem 'websocket-rails'
 gem 'haml-rails'
 gem "twitter-bootstrap-rails"
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
+gem 'settingslogic'
 
 group :development, :test do
   gem 'sqlite3'

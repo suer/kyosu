@@ -1,0 +1,5 @@
+devise_secret_key: 'ebf5126e439aff391009b0d57247756d05e8b7ccfe62f25d58b32c571d24e5866d5ffd7e7ba1fa2ed29577dd3682012e877856c6068e8ba95200407abd3bf6bb'
+
+omniauth:
+  provider: <%= ENV['OMNIAUTH_PROVIDER'] || 'github' %>
+  args: <%= ENV['OMNIAUTH_ARGS'] || '[]' %>

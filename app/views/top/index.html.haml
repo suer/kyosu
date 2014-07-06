@@ -6,5 +6,10 @@
           %h1 Kyôsu
           %h4 A simple, open, realtime notification service
   .row-fluid
-    .content
-      .span3.offset3.text-center
+    .span12
+      .content
+        .text-center
+          = form_tag user_omniauth_authorize_path(Settings.omniauth.provider.to_sym), :method => 'post' do |f|
+            %button.btn.btn-primary.btn-large
+              %i.icon-signout
+              = t(:button_sign_in)
