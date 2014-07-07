@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resources :apps
 
-  get 'app/index'
-  get 'app', controller: :app, action: :index
+  get 'apps/:id/getting_start', controller: :apps, action: :getting_start, as: 'app_getting_start'
 
   get 'top/index'
 

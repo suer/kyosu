@@ -1,0 +1,15 @@
+%h1 Dashboard
+
+.row
+  .pull-right= link_to 'New App', new_app_path, class: 'btn btn-primary'
+
+.apps
+  - @apps.each do |app|
+    .app
+      .info
+        %span
+          %strong= app.title
+        %span.pull-right= app.created_at
+        %p= link_to 'more info...', app
+        %p= link_to 'Getting start', app_getting_start_path(app.id)
+

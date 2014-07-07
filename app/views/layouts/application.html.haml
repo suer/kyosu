@@ -18,9 +18,11 @@
     .navbar.navbar-fixed-top.navbar-inverse
       .navbar-inner
         .container
-          %a.brand(href=root_path)=image_tag "white_logo.png"
+          = link_to image_tag(asset_path('logo-white.png')), {controller: 'top'}, class: 'brand'
           .nav-collapse
           - if user_signed_in?
+            %ul.nav
+              %li= link_to 'Dashboard', apps_path
             %ul.nav.pull-right
               %li.dropdown
                 %a.dropdown-toggle(data-toggle="dropdown" role="button" href="#")

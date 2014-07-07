@@ -1,3 +1,7 @@
+/*
+ * =require bootstrap_and_overrides
+ */
+
 body {
   padding-top: 60px;
 }
@@ -86,4 +90,30 @@ footer {
   label {
     color: #b94a48;
   }
+}
+
+.app {
+  background-color: #eeeeee;
+  margin: 10px 0px 10px 0px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.app .info {
+  padding: 10px 10px 10px 10px;
+}
+
+.app .info span, .app p {
+  margin: 0px 5px 0px 5px;
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+.field-title {
+  text-align: right;
+  padding-right: 10px;
 }
