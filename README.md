@@ -35,8 +35,7 @@ launch mongodb:
 
 launch application:
 
-    $ bundle exec rake db:migrate RAILS_ENV=test
-
+    $ bundle exec rails server
 Testing
 ---------------
 
@@ -44,8 +43,6 @@ launch mongodb:
 
     $ mkdir kyosu_test
     $ mongod --dbpath kyosu_test
-
-    $ bundle exec rake db:migrate RAILS_ENV=test
 
 Run tests:
 
