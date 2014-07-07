@@ -8,6 +8,12 @@
     %th.field-title Title
     %td= @app.title
   %tr
+    %th.field-title GUID
+    %td= @app.guid
+  %tr
     %th.field-title Updated at
     %td= @app.updated_at
 
+%br
+= link_to 'Edit', edit_app_path, class: 'btn btn-primary'
+= link_to 'Delete', @app, method: :delete, class: 'btn btn-danger', data: {confirm: "You sure?"}
