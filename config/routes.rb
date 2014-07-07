@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :apps
+
   get 'app/index'
   get 'app', controller: :app, action: :index
 

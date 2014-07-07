@@ -51,5 +51,7 @@ gem 'bson_ext'
 group :development, :test do
   gem 'erb2haml'
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'mongoid-rspec'
   gem 'quiet_assets'
 end

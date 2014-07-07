@@ -6,6 +6,7 @@ class User
 
   field :name
   field :nickname
+  has_many :apps
 
   # avoid error 10068: "invalid operator: $oid"
   # see https://github.com/plataformatec/devise/issues/2949
