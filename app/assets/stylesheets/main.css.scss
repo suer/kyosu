@@ -125,3 +125,12 @@ a {
 .control-group.field {
   margin-bottom: 10px;
 }
+
+#console {
+  width: 100%;
+}
+
+.CodeMirror {
+  height: auto;
+  border: 1px solid #ddd;
+}

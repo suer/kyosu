@@ -39,6 +39,7 @@ gem 'spring',        group: :development
 gem 'websocket-rails'
 gem 'haml-rails'
 gem "twitter-bootstrap-rails"
+gem 'codemirror-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'

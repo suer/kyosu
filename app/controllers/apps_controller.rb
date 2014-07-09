@@ -1,5 +1,5 @@
 class AppsController < ApplicationController
-  before_action :set_app, only: [:show, :edit, :update, :destroy]
+  before_action :set_app, only: [:show, :edit, :update, :destroy, :getting_start]
 
   # GET /apps
   # GET /apps.json

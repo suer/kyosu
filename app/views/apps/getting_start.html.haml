@@ -1,2 +1,75 @@
 %h1 Getting start
 
+%h2 Prepare
+= text_area_tag :prepare, prepare_sample_code, class: 'input-xxlarge'
+
+%h2 Connection
+= text_area_tag :connection, connection_sample_code(@app), class: 'input-xxlarge'
+
+%h2 Subscribe channel
+.row
+  .span4=text_area_tag :subscribe, subscribe_sample_code, class: 'input-xxlarge'
+  .span4
+    .form-horizontal
+      .control-group.field
+        %label.control-label{for: 'subscribe-channel-field'} Channel
+        .controls= text_field_tag :'subscribe-channel-field', 'demo', placeholder: 'Channel'
+      .control-group
+        .controls= button_tag 'SUBSCRIBE', id: 'subscribe-button', class: 'btn'
+
+%h2 Event binding
+.row
+  .span4=text_area_tag :'event-binding', event_binding_sample_code, class: 'input-xxlarge'
+  .span4
+    .form-horizontal
+      .control-group.field
+        %label.control-label{for: 'event-binding-channel-field'} Channel
+        .controls= text_field_tag :'event-binding-channel-field', 'demo', placeholder: 'Channel'
+      .control-group.field
+        %label.control-label{for: 'event-binding-event-name-field'} Event
+        .controls= text_field_tag :'event-binding-event-name-field', 'event', placeholder: 'Event'
+      .control-group
+        .controls= button_tag 'EVENT BIND', id: 'event-binding-button', class: 'btn'
+
+%h2 Publish
+.row
+  .span4=text_area_tag :publish, event_binding_sample_code, class: 'input-xxlarge'
+  .span4
+    .form-horizontal
+      .control-group.field
+        %label.control-label{for: 'publish-channel-field'} Channel name
+        .controls= text_field_tag :'publish-channel-field', 'demo', placeholder: 'Channel'
+      .control-group.field
+        %label.control-label{for: 'publish-event-name-field'} Event name
+        .controls= text_field_tag :'publish-event-name-field', 'event', placeholder: 'Event'
+      .control-group.field
+        %label.control-label{for: 'publish-data-field'} Sending Data
+        .controls= text_field_tag :'publish-data-field', '{"message":"Hello"}', placeholder: 'Sending Data'
+      .control-group
+        .controls= button_tag 'PUBLISH', id: 'publish-button', class: 'btn'
+
+%h2 Console
+.row
+  .span6= text_area_tag :console, '', size: "300x10"
+
+:javascript
+  $(function() {
+    function highlight(selector, mode) {
+      $(selector).each(function() {
+        CodeMirror.fromTextArea(this, {mode: mode, lineNumbers: true, readOnly: true});
+      });
+    }
+    highlight('#prepare', 'htmlmixed');
+    highlight('#connection', 'javascript');
+    highlight('#subscribe', 'javascript');
+    highlight('#event-binding', 'javascript');
+    highlight('#publish', 'javascript');
+  });
+
+:javascript
+  var app = {
+    id : '@app.guid'
+  }
+
+%script{src: root_url + "kyosu.js"}
+%script{src: root_url + "demo.js"}

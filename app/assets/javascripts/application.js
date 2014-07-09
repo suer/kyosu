@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require codemirror
+//= require codemirror/modes/xml
+//= require codemirror/modes/htmlmixed
+//= require codemirror/modes/javascript
 //= require_tree .
 //= require websocket_rails/main
-
